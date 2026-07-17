@@ -1,21 +1,17 @@
 /* ---------------------------------------------
-   Token system
-   Background: warm stone paper, not the AI-default cream
-   Ink: soft charcoal, not pure black
-   Accent: muted moss-teal — steady, measured, "tracked progress"
-   Type: a serif for reading, a monospace for dates/meta
-     (echoing pace splits & goal logs from the writing itself)
+   Design system — from Claude Design handoff
+   Single ink color, no accent. Arial for UI/headers/dates,
+   Georgia for body copy. The site's mark is الحمد لله,
+   set plain (no calligraphic font), top-left of the nav.
 --------------------------------------------- */
 :root {
-  --bg: #F6F4EF;
-  --ink: #24231F;
-  --ink-soft: #55534C;
-  --accent: #4F6B5D;
-  --accent-soft: #DDE3DC;
-  --rule: #DAD6CC;
+  --bg: #F6F6F5;      /* oklch(97% 0.004 240) */
+  --ink: #171718;     /* oklch(20% 0.004 240) */
+  --divider: rgba(0, 0, 0, 0.10);
+  --divider-dashed: rgba(0, 0, 0, 0.12);
 
-  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, Menlo, monospace;
+  --font-ui: Arial, Helvetica, sans-serif;
+  --font-body: Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -26,9 +22,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--font-serif);
-  font-size: 18px;
-  line-height: 1.65;
+  font-family: var(--font-ui);
+  font-size: 16px;
 }
 
 .wrap {
@@ -38,121 +33,154 @@ body {
 }
 
 a {
-  color: var(--accent);
+  color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--accent-soft);
-}
-a:hover, a:focus-visible {
-  border-bottom-color: var(--accent);
 }
 
-/* Header */
+/* Header / nav */
 .site-header {
-  border-bottom: 1px solid var(--rule);
-  padding: 28px 0;
+  padding: 64px 0 0;
 }
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  flex-wrap: wrap;
-  gap: 12px;
+  margin-bottom: 56px;
 }
-.site-name {
-  font-family: var(--font-mono);
+.mark {
+  font-family: var(--font-ui);
+  font-weight: 400;
   font-size: 15px;
-  letter-spacing: 0.02em;
-  border-bottom: none;
-  color: var(--ink);
 }
-.site-nav a {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  margin-left: 18px;
-  border-bottom: none;
-  color: var(--ink-soft);
+.site-nav {
+  display: flex;
+  gap: 18px;
+  font-size: 12.5px;
+  opacity: 0.6;
 }
-.site-nav a:first-child { margin-left: 0; }
-.site-nav a:hover { color: var(--accent); }
+.site-nav a.active {
+  opacity: 1;
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 2px;
+}
 
-/* Homepage post list — the "logbook" */
+/* Homepage post list */
 .post-list {
   list-style: none;
-  margin: 48px 0;
+  margin: 0;
   padding: 0;
 }
 .post-list-item {
   display: flex;
-  align-items: baseline;
-  gap: 16px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--rule);
+  justify-content: space-between;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px dashed var(--divider-dashed);
 }
-.post-list-item:first-child { padding-top: 0; }
-.post-date {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--ink-soft);
-  flex-shrink: 0;
-  width: 90px;
-}
-.post-title {
-  color: var(--ink);
+.post-list-item.last {
   border-bottom: none;
 }
-.post-title:hover { color: var(--accent); }
+.post-title {
+  font-size: 14px;
+}
+.post-date {
+  font-size: 12.5px;
+  opacity: 0.45;
+  flex: none;
+}
 
 /* Single post */
+.post-title-full {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
 .post-meta {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin: 40px 0 4px;
+  font-size: 14px;
+  opacity: 0.5;
+  margin: 0 0 28px;
 }
-.post-title, .page-title {
-  font-size: 32px;
-  line-height: 1.25;
-  margin: 0 0 32px;
+.post-content p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 0 18px;
 }
-.post-content p, .page-content p {
-  margin: 0 0 20px;
-}
-.post-content ul, .page-content ul {
-  margin: 0 0 20px;
+.post-content ul {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 0 18px;
   padding-left: 22px;
 }
 .back-link {
-  font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 13px;
+  opacity: 0.6;
   margin: 48px 0;
+}
+
+/* Static pages (About / Now) */
+.page-title {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+.page-content p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0 0 16px;
+}
+
+/* Now page category blocks */
+.now-block {
+  margin-bottom: 22px;
+}
+.category-label {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.55;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.now-block p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0;
+}
+.now-meta {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  opacity: 0.4;
+  margin-top: 26px;
 }
 
 /* Footer */
 .site-footer {
-  border-top: 1px solid var(--rule);
-  margin-top: 64px;
-  padding: 24px 0 48px;
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--ink-soft);
+  border-top: 1px solid var(--divider);
+  margin-top: 56px;
 }
 .footer-inner {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
 }
-.footer-links a {
-  border-bottom: none;
-  color: var(--ink-soft);
-  margin-left: 14px;
+.icon-link {
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
 }
-.footer-links a:hover { color: var(--accent); }
+.icon-link:hover {
+  opacity: 0.8;
+}
 
 /* Mobile */
 @media (max-width: 480px) {
-  body { font-size: 17px; }
-  .post-title, .page-title { font-size: 26px; }
-  .post-list-item { flex-direction: column; gap: 2px; }
-  .post-date { width: auto; }
+  .site-header { padding-top: 40px; }
+  .header-inner { margin-bottom: 40px; }
+  .post-title-full { font-size: 24px; }
 }

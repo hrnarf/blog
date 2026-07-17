@@ -4,23 +4,19 @@ title: Now
 permalink: /now/
 ---
 
-_Last updated: [add date]_
+<div class="now-block">
+<p class="category-label">Actively Pursuing</p>
+<p>[Placeholder — swap in what you're actually working towards right now. Some of these won't land inside a single year.]</p>
+</div>
 
-A snapshot of what I'm currently focused on — updated every so often, not a running diary.
+<div class="now-block">
+<p class="category-label">Passively Pursuing</p>
+<p>[Placeholder — things happening in the background without daily attention, e.g. saving towards something.]</p>
+</div>
 
-**Actively pursuing**
+<div class="now-block">
+<p class="category-label">Would Like to Pursue</p>
+<p>[Placeholder — on the list, not yet started.]</p>
+</div>
 
-- [Goal] — what success looks like: [measurable outcome]
-- [Goal] — what success looks like: [measurable outcome]
-
-**Passively pursuing**
-
-- [Goal that happens in the background, e.g. saving toward something]
-
-**Would like to pursue**
-
-- [Something on the radar, not yet started]
-
----
-
-*This page is a placeholder — swap in your actual goal categories from "Almost Halfway" whenever you're ready, and keep it current going forward.*
+<p class="now-meta">Accurate as of [Month Year]</p>
