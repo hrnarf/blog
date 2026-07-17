@@ -1,0 +1,158 @@
+/* ---------------------------------------------
+   Token system
+   Background: warm stone paper, not the AI-default cream
+   Ink: soft charcoal, not pure black
+   Accent: muted moss-teal — steady, measured, "tracked progress"
+   Type: a serif for reading, a monospace for dates/meta
+     (echoing pace splits & goal logs from the writing itself)
+--------------------------------------------- */
+:root {
+  --bg: #F6F4EF;
+  --ink: #24231F;
+  --ink-soft: #55534C;
+  --accent: #4F6B5D;
+  --accent-soft: #DDE3DC;
+  --rule: #DAD6CC;
+
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+}
+a:hover, a:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  padding: 28px 0;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.site-name {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  border-bottom: none;
+  color: var(--ink);
+}
+.site-nav a {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  margin-left: 18px;
+  border-bottom: none;
+  color: var(--ink-soft);
+}
+.site-nav a:first-child { margin-left: 0; }
+.site-nav a:hover { color: var(--accent); }
+
+/* Homepage post list — the "logbook" */
+.post-list {
+  list-style: none;
+  margin: 48px 0;
+  padding: 0;
+}
+.post-list-item {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.post-list-item:first-child { padding-top: 0; }
+.post-date {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  width: 90px;
+}
+.post-title {
+  color: var(--ink);
+  border-bottom: none;
+}
+.post-title:hover { color: var(--accent); }
+
+/* Single post */
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 40px 0 4px;
+}
+.post-title, .page-title {
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 0 0 32px;
+}
+.post-content p, .page-content p {
+  margin: 0 0 20px;
+}
+.post-content ul, .page-content ul {
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+.back-link {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  margin: 48px 0;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 64px;
+  padding: 24px 0 48px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-links a {
+  border-bottom: none;
+  color: var(--ink-soft);
+  margin-left: 14px;
+}
+.footer-links a:hover { color: var(--accent); }
+
+/* Mobile */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .post-title, .page-title { font-size: 26px; }
+  .post-list-item { flex-direction: column; gap: 2px; }
+  .post-date { width: auto; }
+}

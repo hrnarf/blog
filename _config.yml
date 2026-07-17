@@ -1,0 +1,14 @@
+title: Haroon
+description: "Documenting life, goals, and the occasional home truth."
+author: Haroon
+email: hello@hrnarf.com
+url: "" # fill in once you know your final domain/subdomain
+baseurl: ""
+
+markdown: kramdown
+permalink: /blog/:title/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
