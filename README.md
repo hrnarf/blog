@@ -14,10 +14,11 @@ A minimal Jekyll blog, set up to run on GitHub Pages for free, with zero build t
 ## Publishing this on GitHub Pages (free)
 
 1. Repo: `hrnarf/blog` (public).
-2. In the repo, go to **Settings → Pages**.
-3. Under "Build and deployment", set Source to **Deploy from a branch**, branch `main`, folder `/ (root)`.
-4. GitHub will build the site automatically — Jekyll is built into GitHub Pages, so no GitHub Actions or extra config needed.
-5. Your site will be live at `https://hrnarf.github.io/blog/` (or your custom domain, if you set one up under Settings → Pages → Custom domain).
+2. Push everything in this folder to that repo.
+3. In the repo, go to **Settings → Pages**.
+4. Under "Build and deployment", set Source to **Deploy from a branch**, branch `main`, folder `/ (root)`.
+5. GitHub will build the site automatically — Jekyll is built into GitHub Pages, so no GitHub Actions or extra config needed.
+6. Your site will be live at `https://hrnarf.github.io/blog/` (or your custom domain, if you set one up under Settings → Pages → Custom domain).
 
 ## Writing a new post
 
