@@ -23,7 +23,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-ui);
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .wrap {
@@ -50,12 +50,12 @@ a {
 .mark {
   font-family: var(--font-ui);
   font-weight: 400;
-  font-size: 15px;
+  font-size: 17px;
 }
 .site-nav {
   display: flex;
-  gap: 18px;
-  font-size: 12.5px;
+  gap: 20px;
+  font-size: 14.5px;
   opacity: 0.6;
 }
 .site-nav a.active {
@@ -74,85 +74,85 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 14px;
-  padding: 11px 0;
+  padding: 13px 0;
   border-bottom: 1px dashed var(--divider-dashed);
 }
 .post-list-item.last {
   border-bottom: none;
 }
 .post-title {
-  font-size: 14px;
+  font-size: 16px;
 }
 .post-date {
-  font-size: 12.5px;
+  font-size: 14px;
   opacity: 0.45;
   flex: none;
 }
 
 /* Single post */
 .post-title-full {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
 }
 .post-meta {
-  font-size: 14px;
+  font-size: 15px;
   opacity: 0.5;
-  margin: 0 0 28px;
+  margin: 0 0 30px;
 }
 .post-content p {
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.8;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 .post-content ul {
   font-family: var(--font-body);
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.8;
-  margin: 0 0 18px;
-  padding-left: 22px;
+  margin: 0 0 20px;
+  padding-left: 24px;
 }
 .back-link {
-  font-size: 13px;
+  font-size: 14.5px;
   opacity: 0.6;
   margin: 48px 0;
 }
 
 /* Static pages (About / Now) */
 .page-title {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 600;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 .page-content p {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16.5px;
   line-height: 1.75;
-  margin: 0 0 16px;
+  margin: 0 0 18px;
 }
 
 /* Now page category blocks */
 .now-block {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .category-label {
   font-family: var(--font-ui);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 600;
   opacity: 0.55;
   text-transform: uppercase;
-  margin: 0 0 6px;
+  margin: 0 0 7px;
 }
 .now-block p {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16.5px;
   line-height: 1.75;
   margin: 0;
 }
 .now-meta {
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 13.5px;
   opacity: 0.4;
   margin-top: 26px;
 }
@@ -174,6 +174,10 @@ a {
   align-items: center;
   opacity: 0.5;
 }
+.icon-link svg {
+  width: 17px;
+  height: 17px;
+}
 .icon-link:hover {
   opacity: 0.8;
 }
@@ -182,5 +186,5 @@ a {
 @media (max-width: 480px) {
   .site-header { padding-top: 40px; }
   .header-inner { margin-bottom: 40px; }
-  .post-title-full { font-size: 24px; }
+  .post-title-full { font-size: 27px; }
 }
