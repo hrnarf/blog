@@ -2,11 +2,11 @@ title: Haroon
 description: "Documenting life, goals, and the occasional home truth."
 author: Haroon
 email: hello@hrnarf.com
-url: "" # fill in once you know your final domain/subdomain
-baseurl: ""
+url: "https://hrnarf.github.io"
+baseurl: "/blog"
 
 markdown: kramdown
-permalink: /blog/:title/
+permalink: /:title/
 
 exclude:
   - README.md
